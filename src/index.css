@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.custom-bg {
+  background: url('./assets/images/hero-area/banner-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.custom-bg-footer {
+  background: url('./assets/images/backgrounds/footer-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+.active {
+  color: black;
+}
+
+.landing-page-shapes-h1::after,
+.landing-page-shapes-h1::before,
+.landing-page-shapes-p::before,
+.landing-page-shapes-p::after {
+  content: '';
+  position: absolute;
+  height: 9.25925vh;
+  width: 10.2925vh;
+  z-index: 1;
+}
+
+.landing-page-shapes-h1::after {
+  right: 25.99592vh;
+  background: url('./assets/images/background-shape/blue-half-cycle.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  animation: Shape_animation 5s infinite alternate linear;
+}
+
+.landing-page-shapes-h1::before {
+  left: 4.62962vh;
+  background: url('./assets/images/background-shape/feature-bg-2.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  animation: Shape_animation 5s infinite alternate linear;
+}
+
+.landing-page-shapes-p::before {
+  left: 25.92592vh;
+  background: url('./assets/images/background-shape/seo-ball-1.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  animation: Shape_animation 5s infinite alternate linear;
+}
+
+.landing-page-shapes-p::after {
+  right: 9.25925vh;
+  top: 46.29629vh;
+  background: url('./assets/images/background-shape/seo-ball-1.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  animation: Shape_animation 5s infinite alternate linear;
+}
+
+@keyframes Shape_animation {
+  0% {
+    transform: translateX(0px);
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateX(40px);
+    transform: translateY(40px);
+  }
+
+  100% {
+    transform: translateX(80px);
+    transform: translateY(80px);
+  }
+}
+
+@media only screen and (max-width:1200px) {
+
+  .landing-page-shapes-h1::after,
+  .landing-page-shapes-h1::before,
+  .landing-page-shapes-p::before,
+  .landing-page-shapes-p::after {
+    content: '';
+    position: absolute;
+    height: 6.25925vh;
+    width: 8.2925vh;
+    z-index: 1;
+  }
+
+}
